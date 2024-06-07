@@ -34,6 +34,7 @@ public class Admin extends User implements CSVActions {
         int option = Integer.parseInt(scan.nextLine());
         if (option == 1){
             Auction.updateAuctionStatus(Auction.path,auctionId,changedType);
+            CSVActions.logAction(this.getName() + " changed auction status to " + changedType);
         }
     }
     @Override
@@ -43,6 +44,7 @@ public class Admin extends User implements CSVActions {
         if (option == 1){
             Variety.modifyItemForAuction(Variety.path, Bid.path,auctionId);
             Auction.deleteAuction(Auction.path,auctionId);
+            CSVActions.logAction(this.getName() + "deleted auction with id :" + auctionId);
         }
     }
 
@@ -53,6 +55,7 @@ public class Admin extends User implements CSVActions {
         System.out.println("Enter type from Variety,Car,Art,Antique");
         String type = scan.nextLine();
         Auction newAuction = new Auction(CSVActions.checkNextId(Auction.path),data,type);
+        CSVActions.logAction(this.getName() + "created auction with id :" + CSVActions.checkNextId(Auction.path));
         newAuction.writeInCSV(Auction.path);
         return newAuction;
 

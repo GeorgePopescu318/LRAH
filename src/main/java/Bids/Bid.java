@@ -121,6 +121,7 @@ public class Bid implements CSVActions {
         scan.nextLine();
 
         int nextId = CSVActions.checkNextId(Bid.path);
+        //CSVActions.logAction("Bid was placed");
         return new Bid(nextId, bidderId, itemId, biddingPrice);
     }
 

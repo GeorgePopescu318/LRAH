@@ -5,29 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="836570c1-a854-44c7-87a4-40f80f100ab4" name="Changes" comment="Added Car,Art,Antique and Variety classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Auctions/Auction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Bids/Bid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exceptions/BaseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exceptions/CSVException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Items/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Services/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Users/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Users/Participant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Users/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Logs.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items/Antique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Items/Antique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items/Art.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Items/Art.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bids/Bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bids/Bid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Items/Variety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Items/Variety.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/CSVActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/CSVActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/User.java" afterDir="false" />
     </list>
-    <list id="4b4e5064-2bd0-4029-b52c-b3156c7ac017" name="Changes by Besel" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items/Art.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Items/Art.java" afterDir="false" />
-    </list>
-    <list id="49df138e-064c-434d-a712-d8e300e2337a" name="Changes by Pavel" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Items/Art.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Items/Art.java" afterDir="false" />
-    </list>
-    <list id="5100503a-a013-4abf-bb34-de14dbf6115f" name="Changes by pisc0" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-    </list>
+    <list id="4b4e5064-2bd0-4029-b52c-b3156c7ac017" name="Changes by Besel" comment="" />
+    <list id="49df138e-064c-434d-a712-d8e300e2337a" name="Changes by Pavel" comment="" />
+    <list id="5100503a-a013-4abf-bb34-de14dbf6115f" name="Changes by pisc0" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,21 +33,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/Items/Art.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="9" changelist="49df138e-064c-434d-a712-d8e300e2337a" />
-        <range start1="3" end1="3" start2="10" end2="11" changelist="49df138e-064c-434d-a712-d8e300e2337a" />
-        <range start1="7" end1="7" start2="15" end2="16" changelist="4b4e5064-2bd0-4029-b52c-b3156c7ac017" />
-        <range start1="14" end1="16" start2="23" end2="29" changelist="836570c1-a854-44c7-87a4-40f80f100ab4" />
-        <range start1="20" end1="22" start2="33" end2="35" changelist="836570c1-a854-44c7-87a4-40f80f100ab4" />
-        <range start1="27" end1="27" start2="40" end2="42" changelist="4b4e5064-2bd0-4029-b52c-b3156c7ac017" />
-        <range start1="36" end1="37" start2="51" end2="52" changelist="49df138e-064c-434d-a712-d8e300e2337a" />
-        <range start1="40" end1="41" start2="55" end2="56" changelist="49df138e-064c-434d-a712-d8e300e2337a" />
-        <range start1="57" end1="58" start2="72" end2="241" changelist="49df138e-064c-434d-a712-d8e300e2337a" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -71,28 +45,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;george&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/facultate/an3sem2/JavaProject/LRAH&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/facultate/an3sem2/JavaProject/LOS_RATONES_Auction_House/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/.Faculta/ProiectJava/LRAH",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/facultate/an3sem2/JavaProject/LOS_RATONES_Auction_House/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -130,6 +104,7 @@
       <workItem from="1717507470072" duration="13337000" />
       <workItem from="1717590165885" duration="6216000" />
       <workItem from="1717764734354" duration="2914000" />
+      <workItem from="1717781413766" duration="2466000" />
     </task>
     <task id="LOCAL-00001" summary="Added Car,Art,Antique and Variety classes">
       <option name="closed" value="true" />

@@ -6,37 +6,31 @@ import Users.Participant;
 import Users.User;
 
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.io.File;
 import java.util.concurrent.ExecutionException;
 
 
 public interface CSVActions {
     void writeInCSV(String path) throws CSVException;
 
-//    public static <T> HashMap<Integer, String> getHashMap(String path, boolean bool) throws Exception {
-//        return null;
-//    }
-//        HashMap<Integer,String > hashMap = new HashMap<Integer,String >();
-//        try(BufferedReader br = new BufferedReader(new FileReader(path))){
-//            String line;
-//            while ((line = br.readLine()) != null){
-//                String[] values = line.split(",");
-//                if(values.length >= 4){
-//                    int id = Integer.parseInt(values[0].trim());
-//                    String auctionType = values[1].trim();
-//
-//                    hashMap.put(id, auctionType);
-//                }
-//            }
-//        }
-//        return hashMap;
-//    }
 
-    //HashMap<Integer,String > auctionsList = new HashMap<Integer,String >();
+    static void logAction(String action) {
+        try {
+            FileWriter fw = new FileWriter("src/logs.csv", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+            LocalDateTime timeStamp = LocalDateTime.now();
+            bw.write(action + " " + dateFormat.format(timeStamp) + "\n");
+            bw.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred while logging the action.");
+            e.printStackTrace();
+        }
+    }
 
      static int checkNextId(String pathFile) throws Exception{
         Scanner sc = new Scanner(new File(pathFile));

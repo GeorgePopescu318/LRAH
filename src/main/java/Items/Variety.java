@@ -6,6 +6,8 @@ import Services.CSVActions;
 import Users.User;
 
 import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.Scanner;
@@ -93,6 +95,20 @@ public class Variety implements CSVActions{
         this.idAuction = idAuction;
     }
 
+    public void logAction(String action) {
+        try {
+            FileWriter fw = new FileWriter("src/logs.csv", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+            LocalDateTime timeStamp = LocalDateTime.now();
+            bw.write(action + " " + dateFormat.format(timeStamp) + "\n");
+            bw.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred while logging the action.");
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -132,6 +148,7 @@ public class Variety implements CSVActions{
         }
         if (bidValue > biggestBid[0]){
             Bid newBid = new Bid(CSVActions.checkNextId(Bid.path),currentUser.getId(),this.getId(),bidValue);
+            CSVActions.logAction("Bid with id: " + CSVActions.checkNextId(Bid.path) + " was placed on item with id: " + this.getId() + " by bidder with id: " + currentUser.getId());
             newBid.writeInCSV(Bid.path);
         }else{
             int option = getValidIntegerInput(scan, "Your bid was smaller than the highest one," +
@@ -166,6 +183,7 @@ public class Variety implements CSVActions{
             scan.nextLine();
 
             int nextId = CSVActions.checkNextId(Variety.path);
+            CSVActions.logAction("Item with id: " + CSVActions.checkNextId(Variety.path) + " was added to auction with id: " + idAuction);
             return new Variety(nextId, name, description, manYear, desiredPrice, idSeller, quantity, idAuction);
         }
 

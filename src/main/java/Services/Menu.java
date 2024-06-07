@@ -15,6 +15,12 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import Auctions.Auction;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -101,47 +107,44 @@ public class  Menu {
 
     public void MainMenu(Scanner scan) throws Exception {
         do {
-        System.out.println("MAIN MENU\n");
-        System.out.println("1.Open profile");
-        System.out.println("2.Check ongoing auctions");
-        System.out.println("3.Check future auctions");
-        System.out.println("4.Exit");
+            System.out.println("MAIN MENU\n");
+            System.out.println("1. Open profile");
+            System.out.println("2. Check ongoing auctions");
+            System.out.println("3. Check future auctions");
+            System.out.println("4. Exit");
             if (currentUser.isAdmin()){
-                System.out.println("5.Check allItems");
+                System.out.println("5. Check all items");
             }
-        int option = Integer.parseInt(scan.nextLine().strip());
-        //jakey cu regex
-        Pattern numberPattern = Pattern.compile("[1-2]+\\s*");
-        if (option == 1) {
-            System.out.println(currentUser);
-            List<String> userItems = currentUser.showMyItems(Variety.path);
-            System.out.println("Your items:");
-            for (String item : userItems){
-                System.out.println(item);
-            }
-            currentUser.changeCredentials(scan);
-        }else if(option == 2){
-            currentAuction = CheckOpenAuctions(scan);
-            if (currentAuction != null) {
-                printOpenAuction(scan,currentUser,currentAuction);
-            }
-        }else if(option == 3){
-            currentAuction = CheckFutureAuctions(scan);
-            if (currentAuction != null) {
-                printFutureAuction(scan,currentUser,currentAuction);
-            }
-        }
-            else if(option == 5 && currentUser.isAdmin()){
+            int option = Integer.parseInt(scan.nextLine().strip());
+            // Pattern numberPattern = Pattern.compile("[1-2]+\\s*"); // This line is not used
+
+            if (option == 1) {
+                System.out.println(currentUser);
+                List<String> userItems = currentUser.showMyItems(Variety.path);
+                System.out.println("Your items:");
+                for (String item : userItems){
+                    System.out.println(item);
+                }
+                currentUser.changeCredentials(scan);
+            } else if (option == 2) {
+                currentAuction = CheckOpenAuctions(scan);
+                if (currentAuction != null) {
+                    printOpenAuction(scan, currentUser, currentAuction);
+                }
+            } else if (option == 3) {
+                currentAuction = CheckFutureAuctions(scan);
+                if (currentAuction != null) {
+                    printFutureAuction(scan, currentUser, currentAuction);
+                }
+            } else if (option == 5 && currentUser.isAdmin()) {
                 List<String> allItems = currentUser.getAllItems(Variety.path);
                 for (String item : allItems){
                     System.out.println(item);
                 }
-        }else{
-            break;
-        }
-            //1
+            } else {
+                break;
+            }
         } while (true);
-
     }
 
     public Auction CheckFutureAuctions(Scanner scan) throws Exception {

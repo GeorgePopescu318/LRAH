@@ -14,6 +14,8 @@ import Services.CSVActions;
 import Services.Menu;
 import java.util.*;
 import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
 public abstract class User{
@@ -221,6 +223,7 @@ public abstract class User{
                         setName(newName);
                         this.updateUserCredentials(path, newName, this.password);
                         validUsername = true;
+                        CSVActions.logAction(this.getName() + " changed their username");
                     } else {
                         System.out.println("Invalid username. Only alphabetic characters are allowed. Please try again.");
                     }
@@ -237,6 +240,7 @@ public abstract class User{
                         String newPassword = scan.nextLine();
                         setPassword(newPassword);
                         this.updateUserCredentials(path, this.name, newPassword);
+                        CSVActions.logAction(this.getName() + " changed their password");
                     } else {
                         System.out.println(" The password you typed in is wrong, please try to carefully enter it again, or press 1 to go back to the main menu");
                         int returnToMenu = Integer.parseInt(scan.nextLine());
